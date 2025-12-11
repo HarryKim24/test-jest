@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Toggle from "./Toggle";
+import Toggle from "../components/Toggle";
 
 describe('Toggle Component - Jest', () => {
   test('초기 상태는 꺼짐', () => {
