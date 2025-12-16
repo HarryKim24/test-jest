@@ -1,20 +1,13 @@
 import { useState } from "react"
+import { loginApi } from "../api/auth";
 
-const fakeLoginApi = () => {
-  return new Promise((res) => {
-    setTimeout(() => {
-      res({ success: true })
-    }, 300);
-  })
-}
-
-const AuthPanel = () => {
+const AuthPannel = () => {
 
   const [status, setStatus] = useState('loggedOut');
 
   const handleLogin = async () => {
     setStatus('loading');
-    const res = await fakeLoginApi();
+    const res = await loginApi();
     if (res.success) setStatus('loggedIn');
   };
 
@@ -47,4 +40,4 @@ const AuthPanel = () => {
   )
 }
 
-export default AuthPanel
+export default AuthPannel
