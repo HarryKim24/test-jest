@@ -1,10 +1,11 @@
+import InputForm from "./components/InputForm";
+import LoginStatus from "./components/LoginStatus";
 import Toggle from "./components/Toggle";
 
 function App() {
   return (
     <div>
-      <h1>Toggle 컴포넌트 테스트</h1>
-      <Toggle />
+      <LoginStatus />
     </div>
   );
 }
